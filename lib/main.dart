@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mhyshop/bottom_navigation.dart';
+import 'package:mhyshop/page/listtest.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Poppins',
       ),
+      // home: ListTest(),
       home: BottomNavigation(),
     );
   }

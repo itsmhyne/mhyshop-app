@@ -8,7 +8,7 @@ class OrderOngoing extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-      child: Column(
+      child: ListView(
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,

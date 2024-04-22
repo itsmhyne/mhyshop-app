@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mhyshop/textstyle.dart';
@@ -20,7 +21,7 @@ class CartPage extends StatelessWidget {
           ),
         ),
         body: Stack(children: [
-          Column(
+          ListView(
             children: [
               const SizedBox(
                 height: 15,
@@ -169,6 +170,7 @@ class CartPage extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 padding: const EdgeInsets.all(20),
+                color: Colors.white,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

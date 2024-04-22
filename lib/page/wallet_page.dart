@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mhyshop/textstyle.dart';
 import 'package:mhyshop/widget/list_tile_transaction_history.dart';
 
@@ -28,113 +29,117 @@ class WalletPage extends StatelessWidget {
               ],
             )),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 18),
-          child: Column(
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                padding: const EdgeInsets.all(30),
-                margin: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'M. Hamdan Yusuf',
-                      style: subtitlebold(color: Colors.white),
-                    ),
-                    Text(
-                      '112 *** *** *** 212',
-                      style: mediumtextregular(color: Colors.white),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      'Your Balance',
-                      style: mediumtextregular(color: Colors.white),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Rp. 1.000',
-                          style: h2bold(color: Colors.white),
-                        ),
-                        Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Text(
-                            "+ Top Up",
-                            style: mediumtextmedium(),
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 18),
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              padding: const EdgeInsets.all(30),
+              margin: EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                  color: Colors.black, borderRadius: BorderRadius.circular(20)),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Transaction History',
-                    style: subtitlesemibold(),
+                    'M. Hamdan Yusuf',
+                    style: subtitlebold(color: Colors.white),
                   ),
                   Text(
-                    'See All',
-                    style: subtitlemedium(),
+                    '112 *** *** *** 212',
+                    style: mediumtextregular(color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Your Balance',
+                    style: mediumtextregular(color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Rp. 1.000',
+                        style: h2bold(color: Colors.white),
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Text(
+                          "+ Top Up",
+                          style: mediumtextmedium(),
+                        ),
+                      )
+                    ],
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Transaction History',
+                  style: subtitlesemibold(),
+                ),
+                Text(
+                  'See All',
+                  style: subtitlemedium(),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  ListTileTransactionHistory(
+                    imgLead: 'assets/icon/wallet_outlined.png',
+                    title: 'Top Up E-Wallet',
+                    date: 'Nov, 2 2023 | 02:11 PM',
+                    price: 'Rp. 1.000',
+                    type: 'Top Up',
+                  ),
+                  ListTileTransactionHistory(
+                    imgLead: 'assets/product/vga.jpg',
+                    title:
+                        'VGA Card Gigabyte GeForce RTX 4060 WINDFORCE OC 8G - 8GB GDDR6',
+                    date: 'Nov, 2 2023 | 02:11 AM',
+                    price: 'Rp. 5.219.000',
+                    type: 'Order',
+                  ),
+                  ListTileTransactionHistory(
+                    imgLead: 'assets/product/monitor.jpg',
+                    title:
+                        'MONITOR GAMING MSI Curve Optix MAG241C 144Hz FHD 23,6"',
+                    date: 'Nov, 2 2023 | 02:11 PM',
+                    price: 'Rp. 2.240.000',
+                    type: 'Order',
+                  ),
+                  ListTileTransactionHistory(
+                    imgLead: 'assets/icon/wallet_outlined.png',
+                    title: 'Top Up E-Wallet',
+                    date: 'Nov, 2 2023 | 02:11 PM',
+                    price: 'Rp. 7.459.000',
+                    type: 'Top Up',
+                  ),
+                ],
               ),
-              ListTileTransactionHistory(
-                imgLead: 'assets/icon/wallet_outlined.png',
-                title: 'Top Up E-Wallet',
-                date: 'Nov, 2 2023 | 02:11 PM',
-                price: 'Rp. 1.000',
-                type: 'Top Up',
-              ),
-              ListTileTransactionHistory(
-                imgLead: 'assets/product/vga.jpg',
-                title:
-                    'VGA Card Gigabyte GeForce RTX 4060 WINDFORCE OC 8G - 8GB GDDR6',
-                date: 'Nov, 2 2023 | 02:11 AM',
-                price: 'Rp. 5.219.000',
-                type: 'Order',
-              ),
-              ListTileTransactionHistory(
-                imgLead: 'assets/product/monitor.jpg',
-                title: 'MONITOR GAMING MSI Curve Optix MAG241C 144Hz FHD 23,6"',
-                date: 'Nov, 2 2023 | 02:11 PM',
-                price: 'Rp. 2.240.000',
-                type: 'Order',
-              ),
-              ListTileTransactionHistory(
-                imgLead: 'assets/icon/wallet_outlined.png',
-                title: 'Top Up E-Wallet',
-                date: 'Nov, 2 2023 | 02:11 PM',
-                price: 'Rp. 7.459.000',
-                type: 'Top Up',
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

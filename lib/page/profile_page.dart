@@ -19,9 +19,8 @@ class PorfilePage extends StatelessWidget {
             ),
             trailing: Image.asset('assets/icon/view_more_outlined.png')),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
+      body: Expanded(
+        child: ListView(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -53,13 +52,17 @@ class PorfilePage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Text(
-              'M. Hamdan Yusuf',
-              style: h3medium(),
+            Center(
+              child: Text(
+                'M. Hamdan Yusuf',
+                style: h3medium(),
+              ),
             ),
-            Text(
-              '+6289 *** *** 212',
-              style: mediumtextregular(),
+            Center(
+              child: Text(
+                '+6289 *** *** 212',
+                style: mediumtextregular(),
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -121,7 +124,7 @@ class PorfilePage extends StatelessWidget {
                 'Logout',
                 style: subtitlemedium(color: Colors.red),
               ),
-            ),
+            )
           ],
         ),
       ),

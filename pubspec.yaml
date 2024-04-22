@@ -37,6 +37,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.4
   flutter_launcher_icons: ^0.13.1
+  flutter_rating_bar: ^4.0.1
   flutter_svg: ^2.0.10+1
   iconsax: ^0.0.8
   introduction_screen: ^3.1.12
@@ -91,19 +92,20 @@ flutter:
     - assets/icon/forward.png
     - assets/icon/m_logo.png
     - assets/icon/profile_filled.png
+    - assets/icon/clothes_filled.png
+    - assets/icon/shoes_filled.png
+    - assets/icon/bag_filled.png
+    - assets/icon/electronic_filled.png
+    - assets/icon/watch_filled.png
+    - assets/icon/jewerly_filled.png
+    - assets/icon/kitchen_filled.png
+    - assets/icon/toys_filled.png
+    # icon
+    - assets/icon/half_star.png
     # dummy
-    - assets/dummy/fan.png
-    - assets/dummy/hdd.png
-    - assets/dummy/monitor.png
-    - assets/dummy/motherboard.png
-    - assets/dummy/processor.png
-    - assets/dummy/ssd.png
-    - assets/dummy/transfer_dana.png
+    - assets/dummy/
     # product
-    - assets/product/vga.jpg
-    - assets/product/monitor.jpg
-    - assets/product/mobo.png
-    - assets/product/processor.jpg
+    - assets/product/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
